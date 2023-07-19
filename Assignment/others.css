@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Featured dishes section */
+.featured-dishes {
+    margin-top: 20px;
+}
+
+/* Individual dish container */
+.dish {
+    margin-bottom: 40px; /* Increase the margin to separate the dishes more */
+    text-align: center; /* Align content (including the image) in the center */
+}
+
+/* Dish image */
+.dish img {
+    display: inline-block; /* Make the image an inline block element */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dish description */
+.dish h3 {
+    margin-top: 10px;
+    font-size: 20px; /* Adjust the font size for consistency */
+    font-weight: bold;
+}
+
+.dish p {
+    margin-top: 5px;
+    font-size: 14px; /* Adjust the font size for consistency */
+}
+
+/* Menu card section */
+.menu-card {
+    margin-top: 40px; /* Add margin between the featured dishes and the menu card */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual menu item */
+.menu-item {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 40px; /* Increase the margin to separate the menu items more */
+}
+
+/* Menu item image */
+.menu-item img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu item name */
+.menu-item h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Menu item description */
+.menu-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Opening hours and contact info sections */
+.opening-hours,
+.contact-info {
+    margin-top: 40px; /* Add margin between the sections */
+}
+
+/* Slideshow styles */
+.slideshow {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.slides-container {
+  display: flex;
+  width: 100%; /* Width is set to 100% to fit one slide at a time */
+  height: 100%;
+  transition: transform 10s ease-in-out; /* Transition for smooth slide effect */
+  transform: translateX(0); /* Start from the first slide */
+}
+
+.slides-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Feature box */
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.feature-box {
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ccc; /* Set the background color to grey */
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative; /* Add position: relative to enable positioning the pseudo-element */
+}
+
+.feature-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.icon-container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: -3px; 
+    left: -3px;
+}
+
+
+.highlighted-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Place the replaced image below the border pseudo-element */
+}
+
+.feature-box:hover .highlighted-icon {
+    display: block; /* Show the replaced image on hover */
+}

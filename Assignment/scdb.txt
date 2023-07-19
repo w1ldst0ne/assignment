@@ -1,0 +1,98 @@
+===Database scdb
+
+== Table structure for table menu
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int|No|
+|food_item|varchar(255)|No|
+|price|decimal(10,2)|No|
+|contents|text|Yes|NULL
+== Dumping data for table menu
+
+|1|Grilled Salmon|18.99|Fresh salmon fillet grilled to perfection
+|2|Filet Mignon|25.99|Tender filet mignon steak served with roasted vegetables
+|3|Spaghetti Bolognese|12.99|Classic Italian pasta dish with rich meat sauce
+|4|Chicken Alfredo|15.99|Creamy Alfredo sauce tossed with grilled chicken and fettuccine pasta
+|5|Caesar Salad|9.99|Crisp romaine lettuce, Parmesan cheese, and croutons with Caesar dressing
+|6|Margherita Pizza|14.99|Traditional pizza topped with fresh tomatoes, mozzarella cheese, and basil
+|7|Beef Burger|11.99|Juicy beef patty topped with cheese, lettuce, tomato, and onion
+|8|Chicken Parmesan|16.99|Breaded chicken breast topped with marinara sauce and melted cheese
+|9|Fish and Chips|13.99|Crispy battered fish served with French fries and tartar sauce
+|10|Mushroom Risotto|17.99|Creamy Arborio rice cooked with mushrooms and Parmesan cheese
+|11|Grilled Chicken Sandwich|10.99|Grilled chicken breast topped with lettuce, tomato, and mayo
+|12|Vegetable Stir-Fry|12.99|Assorted vegetables stir-fried with a choice of sauce
+|13|Shrimp Scampi|19.99|Garlic and butter sautéed shrimp served over linguine pasta
+|14|Beef Tacos|9.99|Soft corn tortillas filled with seasoned beef, lettuce, and salsa
+|15|Chicken Caesar Wrap|8.99|Grilled chicken, romaine lettuce, and Caesar dressing wrapped in a tortilla
+|16|Pesto Pasta|14.99|Pasta tossed with homemade pesto sauce and cherry tomatoes
+|17|BBQ Ribs|20.99|Tender pork ribs glazed with BBQ sauce, served with coleslaw and cornbread
+|18|Veggie Pizza|13.99|Assorted vegetables and cheese on a thin crust
+|19|Chicken Satay Skewers|11.99|Grilled marinated chicken skewers served with peanut sauce
+|20|Chocolate Brownie Sundae|8.99|Warm chocolate brownie topped with vanilla ice cream and chocolate sauce
+== Table structure for table queries
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int|No|
+|name|varchar(100)|No|
+|email|varchar(100)|No|
+|message|text|No|
+|created_at|timestamp|Yes|CURRENT_TIMESTAMP
+|reply|text|Yes|NULL
+|responded|tinyint(1)|Yes|0
+== Dumping data for table queries
+
+|1|dsfh|adrianstephansat2003@gmail.com|asdasdasdasdasfas|2023-07-17 20:51:40|NULL|1
+|3|xcv|aaff@fas|vzvnsdfz|2023-07-18 19:40:30|NULL|1
+== Table structure for table reservations
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int|No|
+|reservation_date|date|No|
+|reservation_time|time|No|
+|payment_status|enum('Pending', 'Paid')|No|
+|customer_name|varchar(255)|No|
+|contact_number|varchar(20)|Yes|NULL
+|username|varchar(255)|No|
+|number_of_people|int|Yes|NULL
+|special_requests|text|Yes|NULL
+|status|enum('Confirmed', 'Cancelled')|Yes|NULL
+|table_number|int|Yes|NULL
+== Dumping data for table reservations
+
+|2|2023-07-08|16:37:00|Paid|asdaerasdfasd|0715716934|cust1|12|asdfsadfasf|Confirmed|NULL
+|3|2023-07-05|17:41:00|Pending|asdasfqd|0715716934|cust1|13|asedfsadf|NULL|319
+|4|2023-07-11|14:41:00|Pending|asdfsd|1231|cust1|1223|asdfafd|NULL|51
+== Table structure for table response
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int|No|
+|queryid|int|Yes|NULL
+|response|text|Yes|NULL
+== Dumping data for table response
+
+|1|1|sdaas
+|2|2|wsdrsdasczxc
+|3|3|xcbv esf zsdfg 
+== Table structure for table users
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int|No|
+|username|varchar(50)|No|
+|password|varchar(255)|No|
+|user_type|enum('staff', 'admin', 'customer')|No|
+== Dumping data for table users
+
+|6|staff1|$2y$10$rw5x105XrR.8N.5bMaC/d.Jf3r2buLQHXJJPUV6d3Sdn6ESRVeNGO|staff
+|5|admin1|$2y$10$qV/054LTz2SFuV92gG14tehB/2fx/AJhe3CwKvVtdrhb3wnJzA7m6|admin
+|9|admin2|$2y$10$aRbK9eAgSFhYk6dUelDhiejid7/uTU7fk1pgAYxVoS9.1KzAWpK/.|admin
+|8|cust1|$2y$10$tHHbIcLENtCYzPFoMN/WBumdpbUEeGkjMDOXzRBF1.w1zQDLjSi/u|customer

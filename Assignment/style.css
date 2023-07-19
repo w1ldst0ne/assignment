@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Signika';
+    src: url('Signika-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-family: "Signika", Arial, sans-serif;
+    background-color: #CBD6E2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Signika", Arial, sans-serif;
+}
+
+p, ul, li, a {
+    font-family: "Signika", Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.topnav {
+  overflow: hidden;
+}
+
+.topnav-right {
+  float: right;
+  margin-right: 5%;
+}
+
+.topnav-right a {
+  /* Button styles */
+}
+
+.topnav-right a:hover {
+  /* Button hover styles */
+}
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #23527c;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.signature-dishes,
+.menu-table {
+    flex-basis: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.menu-table {
+    overflow: auto;
+}
+
+.menu-table table {
+    width: 100%;
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+
